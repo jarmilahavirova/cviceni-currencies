@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Rate } from '../../components/Rate';
-import './style.css';
+import { useState } from "react";
+import { Rate } from "../../components/Rate";
+import "./style.css";
 
 export const HomePage = () => {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState("USD");
 
   const handleCurrencyChange = (e) => {
     setCurrency(e.target.value);
@@ -27,7 +27,7 @@ export const HomePage = () => {
             </select>
           </div>
         </form>
-        <Rate />
+        <Rate from={currency} />
       </div>
     </div>
   );
